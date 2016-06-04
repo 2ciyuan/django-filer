@@ -88,6 +88,7 @@ class ClipboardAdmin(admin.ModelAdmin):
                     'thumbnail': file_obj.icons['32'],
                     'alt_text': '',
                     'label': str(file_obj),
+                    'url' : file_obj.url,
                 }
                 return HttpResponse(json.dumps(json_response),
                                     **response_params)
